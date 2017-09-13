@@ -1,0 +1,9 @@
+.*.swp
+*.o
+*.obj
+*.exe
+a.out
+*.d
+*.txt
+*.dat
+*.py[cod]
