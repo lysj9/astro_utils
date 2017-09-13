@@ -4,6 +4,8 @@
 *.exe
 a.out
 *.d
+*.mod
+test_main.*
 *.txt
 *.dat
 *.py[cod]
