@@ -63,6 +63,7 @@ Module galactic
 	cos_ra0 = (sin_b - sin_gp_dec * sin_dec) / (cos_gp_dec * cos_dec)
 	ra0 = atan2(sin_ra0, cos_ra0) * rad2deg
 	ra  = ra0 + gp_ra
+	if (ra >= 360) ra = ra - 360
 	return
 	end subroutine galactic2
 

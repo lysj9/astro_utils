@@ -30,9 +30,8 @@ def galactic1(ra, dec):
     l0 = np.rad2deg(np.arctan2(sin_l0, cos_l0))
     l  = lp - l0
     l  = np.where(l < 0.0, l + 360.0, l)
-
-    if type(ra) != np.ndarray:
-        l = float(l)
+    # for type consistency
+    l  = l + 0.0
 
     return (l, b)
 
@@ -47,6 +46,9 @@ def galactic2(l, b):
     cos_ra0 = (sin_b - sin_gp_dec * sin_dec) / (cos_gp_dec * cos_dec)
     ra0 = np.rad2deg(np.arctan2(sin_ra0, cos_ra0))
     ra  = ra0 + gp_ra
+    ra  = np.where(ra >= 360.0, ra - 360.0, ra)
+    # for type consistency
+    ra  = ra + 0.0
 
     return (ra, dec)
 

@@ -33,7 +33,7 @@ void galactic1(double ra, double dec, double *x, double *y)
 	cos_l0 = (sin_dec - sin_gp_dec * sin_b) / (cos_gp_dec * cos_b);
 	l0 = atan2(sin_l0, cos_l0) * rad2deg;
 	l  = lp - l0;
-	if (l < 0) l = l + 360;
+	if (l < 0) l += 360;
 	*x = l;
 	*y = b;
 	return;
@@ -57,6 +57,7 @@ void galactic2(double l, double b, double *x, double *y)
 	cos_ra0 = (sin_b - sin_gp_dec * sin_dec) / (cos_gp_dec * cos_dec);
 	ra0 = atan2(sin_ra0, cos_ra0) * rad2deg;
 	ra  = ra0 + gp_ra;
+	if (ra >= 360) ra -= 360;
 	*x = ra;
 	*y = dec;
 	return;
