@@ -4,6 +4,8 @@ Module galactic
 	real(kind=DP),parameter::PI=3.14159265358979323846_DP
 	real(kind=DP),parameter::deg2rad=PI/180.0_DP
 	real(kind=DP),parameter::rad2deg=180.0_DP/PI
+!	gp_ra, gp_dec, lp: given by Reid & Brunthaler 2004
+!	http://adsabs.harvard.edu/abs/2004ApJ...616..872R
 !	real(kind=DP),parameter::gc_ra=266.405100_DP,gc_dec=-28.936175_DP
 	real(kind=DP),parameter::gp_ra=192.859508_DP,gp_dec=27.128336_DP
 	real(kind=DP),parameter::lp=122.932_DP

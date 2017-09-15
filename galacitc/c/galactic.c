@@ -1,6 +1,8 @@
 #include <math.h>
 #include <stdio.h>
 
+// gp_ra, gp_dec, lp: given by Reid & Brunthaler 2004
+// http://adsabs.harvard.edu/abs/2004ApJ...616..872R
 #define PI 3.14159265358979323846
 #define deg2rad (PI / 180.0)
 #define rad2deg (180.0 / PI)

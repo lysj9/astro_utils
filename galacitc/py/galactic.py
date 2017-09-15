@@ -1,4 +1,6 @@
 import numpy as np
+# gp_ra, gp_dec, lp: given by Reid & Brunthaler 2004
+# http://adsabs.harvard.edu/abs/2004ApJ...616..872R
 gp_ra = 192.859508
 gp_dec = 27.128336
 lp = 122.932
